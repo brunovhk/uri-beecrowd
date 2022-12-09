@@ -1,9 +1,13 @@
 var input = require("fs").readFileSync("/dev/stdin", "utf8");
-var values = input.split("\n");
+input = input.replace('\n', ' ');
 
-var km = parseInt(values[0]);
-var l = parseFloat(values[1]);
+var values = input.split(' ');
 
-var kmL = km / l;
+var x1 = parseFloat(values[0]);
+var y1 = parseFloat(values[1]);
+var x2 = parseFloat(values[2]);
+var y2 = parseFloat(values[3]);
 
-console.log(`${kmL.toFixed(3)} km/l`);
+var distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+console.log(`${distancia.toFixed(4)}`);
