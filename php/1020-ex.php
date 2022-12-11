@@ -1,6 +1,6 @@
 <?php
 
-$days = readline('Digita idade ae veinho: ');
+$days = readline('');
 
 echo (int)($days / 365) . ' ano(s)' . PHP_EOL;
 $aux = ($days % 365);
